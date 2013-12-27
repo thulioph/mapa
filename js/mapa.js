@@ -70,9 +70,7 @@ function initialize() {
   ];
 
   // crio um objeto passando o array de estilos (styles) e definindo um nome para ele;
-  var styledMap = new google.maps.StyledMapType(styles, {
-    name: "Mapa Style"
-  });
+  var styledMap = new google.maps.StyledMapType(styles, {name: "Mapa Style"});
 
   // Aplicando as configurações do mapa
   map.mapTypes.set('map_style', styledMap);
