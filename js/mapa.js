@@ -1,7 +1,7 @@
 function initialize() {
 
   // Exibir mapa;
-  var myLatlng = new google.maps.LatLng(-8.0723903, -34.88574169999998);
+  var myLatlng = new google.maps.LatLng(-8.0631495, -34.87131120000004);
   var mapOptions = {
     zoom: 17,
     center: myLatlng,
@@ -14,7 +14,9 @@ function initialize() {
 
 
   // Parâmetros do texto que será exibido no clique;
-  var contentString = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, atque.' + 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique ipsam cum quisquam quas iusto. Quisquam, officia, unde ad beatae hic fuga necessitatibus eligendi iure nemo reprehenderit? Beatae, minus ducimus eaque.';
+  var contentString = '<h2>Marco Zero</h2>' +
+  '<p>Praça Rio Branco, Recife/PE.</p>' +
+  '<a href="http://pt.wikipedia.org/wiki/Pra%C3%A7a_Rio_Branco_(Recife)" target="_blank">clique aqui para mais informações</a>';
   var infowindow = new google.maps.InfoWindow({
       content: contentString,
       maxWidth: 700
@@ -26,7 +28,7 @@ function initialize() {
 
 
   // Marcador personalizado;
-  var image = './img/marcador2.png';
+  var image = './img/marcador.png';
   var marcadorPersonalizado = new google.maps.Marker({
       position: myLatlng,
       map: map,
@@ -47,7 +49,7 @@ function initialize() {
   var styles = [
     {
       stylers: [
-        { hue: "#dddc00" },
+        { hue: "#41a7d5" },
         { saturation: 60 },
         { lightness: -20 },
         { gamma: 1.51 }
@@ -68,7 +70,9 @@ function initialize() {
   ];
 
   // crio um objeto passando o array de estilos (styles) e definindo um nome para ele;
-  var styledMap = new google.maps.StyledMapType(styles, {name: "Mapa Style"});
+  var styledMap = new google.maps.StyledMapType(styles, {
+    name: "Mapa Style"
+  });
 
   // Aplicando as configurações do mapa
   map.mapTypes.set('map_style', styledMap);

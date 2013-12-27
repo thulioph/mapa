@@ -1,23 +1,23 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt,BR">
 <head>
 	<meta charset="UTF-8">
-	<title>Personalizando Pins mapa Google Maps</title>
+	<title>API Google Maps V3</title>
 
-<!-- API Google Maps -->
-<!-- <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDeHb17So0QupSGO_d6b8X-OyvJ32UQehs&sensor=true"> </script> -->
+	<!-- Inicialização do mapa -->
+	<script src="js/mapa.js"></script>
 
-<!-- Inicialização do mapa -->
-<script src="js/mapa.js"></script>
-
-<!-- Geolocalização  -->
-<script src="js/geo.js"></script>
+	<style>
+		#mapa{
+			width: 100%;
+			height: 500px;
+			border: 1px solid #ccc;
+		}
+	</style>
 
 </head>
 
 <body>
-	<div id="mapa" style="height: 500px; width: 100%; border: 1px solid #ccc;"></div>
-
-	<div id="geo" style="height: 500px; width: 100%; margin-top:300px; border: 2px solid #000;"></div>
+	<div id="mapa"></div>
 </body>
 </html>
